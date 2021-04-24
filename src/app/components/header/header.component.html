@@ -1,0 +1,165 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand" href="#">Navbar</a>
+  <button
+    class="navbar-toggler"
+    type="button"
+    data-toggle="collapse"
+    data-target="#navbarSupportedContent"
+    aria-controls="navbarSupportedContent"
+    aria-expanded="false"
+    aria-label="Toggle navigation"
+  >
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="#"
+          >Home <span class="sr-only">(current)</span></a
+        >
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/products">Products</a>
+      </li>
+      <li class="nav-item dropdown">
+        <a
+          class="nav-link dropdown-toggle"
+          href="#"
+          id="navbarDropdown"
+          role="button"
+          data-toggle="dropdown"
+          aria-haspopup="true"
+          aria-expanded="false"
+        >
+          Category
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <div *ngFor="let c of categories">
+            <a class="dropdown-item" href="#">{{ c.name }}</a>
+          </div>
+        </div>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/users">Users</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/posts">Posts</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/login">Login</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/register">Register</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/login-reactive">Login By Reactive</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/register-reactive">Register By Reactive</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/notes">Notes</a>
+      </li>
+    </ul>
+    <form class="form-inline my-2 my-lg-0">
+      <input
+        class="form-control mr-sm-2"
+        type="search"
+        placeholder="Search"
+        aria-label="Search"
+      />
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">
+        Search
+      </button>
+    </form>
+  </div>
+</nav>
+<div class="photo-banner"></div>
+<!-- <p>header works!</p> -->
+
+<!-- <p>This is a prop from Header Componant: {{ name }}</p> -->
+
+<!-- <button
+  class="btn btn-primary"
+  style="color: red"
+  [style.font-size.px]="fontSize"
+  [style.fontWeight]="isBold ? 'bold' : 'noraml'"
+>
+  Click Me
+</button> -->
+
+<!-- <input type="button" onclick="onClick()" class="btn btn-primary" value="Click Me"> -->
+
+<!-- <table class="table table-striped table-dark" style="width: 300px; height: auto; text-align: center;">
+  <tr>
+    <td>First Name</td>
+     <td>{{firstName}}</td>
+  </tr>
+
+  <tr>
+    <td>Last Name</td>
+     <td>{{lastName}}</td>
+  </tr>
+
+  <tr *ngIf="showDetails">
+    <td>Address</td>
+     <td>{{address}}</td>
+  </tr>
+
+  <tr *ngIf="showDetails">
+    <td>Faculty</td>
+     <td>{{faculty}}</td>
+  </tr>
+
+  <tr *ngIf="showDetails">
+    <td>Mobile</td>
+     <td>{{mobile}}</td>
+  </tr>
+
+  <tr *ngIf="showDetails">
+    <td>Gender</td>
+     <td>{{gender}}</td>
+  </tr>
+
+</table>
+<button (click)="toggleDetails()" class="btn btn-success">
+  {{showDetails ? 'Hide' : 'Show'}} Details
+</button> -->
+
+
+<!-- <div class="container">
+  <div class="row">
+    <div class="form-bg">
+      <form #studentForm="ngForm" (ngSubmit)="RegisterStudent(studentForm)">
+        <div class="panel panel-primary">
+          <div class="panel-heading">
+            <h3 class="panel-title">Student Registration</h3>
+          </div>
+          <div class="panel-body">
+
+            <div class="form-group">
+              <label for="firstName">First Name</label>
+              <input type="text" id="firstName" name="firstName" ngModel class="form-control">
+            </div>
+
+            <div class="form-group">
+              <label for="lastName">Last Name</label>
+              <input type="text" id="lastName" name="lastName" ngModel class="form-control">
+            </div>
+
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="text" id="email" name="email" ngModel class="form-control">
+            </div>
+          </div>
+
+          <div class="panel-footer">
+            <button class="btn btn-primary" type="submit">Submit</button>
+          </div>
+
+        </div>
+      </form>
+    </div>
+  </div>
+</div> -->

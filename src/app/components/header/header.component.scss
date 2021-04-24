@@ -1,0 +1,11 @@
+@import '~bootstrap/dist/css/bootstrap.min.css';
+
+
+.photo-banner {
+    width: 100%;
+    background-image: url("../../../assets/banner.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 405px;
+    background-position: center;
+}

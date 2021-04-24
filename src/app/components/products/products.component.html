@@ -1,0 +1,134 @@
+<!-- <p>products works!</p>
+<h3 *ngIf="discount != 'No Discount'">Test Structural Directives</h3> -->
+
+<!-- To Add Class  -->
+<!-- <button [class.colorClass] = '!colorClass'>Click Me</button>  -->
+
+<!-- To Remove Class -->
+<!-- <button [class.colorClass] = 'colorClass'>Click Me</button> -->
+
+<!-- <h3 style="border-color: rgb(71, 143, 24)">
+  <span style="color: brown">Store Name: </span>{{ storeName |uppercase}}
+</h3>
+<img [src]="storeLogo" alt="" style="width: 100px; height: auto" />
+<h3>We offer an explicit discount of: {{ discount| percent }}</h3>
+<br />
+<label>Write Your Name Here: &nbsp;&nbsp;</label>
+<input type="text" [(ngModel)]="clinetName" />
+{{ clinetName }}
+<br /><br /> -->
+
+<!-- <button
+  class="btn btn-primary"
+  style="margin: 10px 10px"
+  (click)="toggleIsPurchase()"
+>
+  Buy
+</button> -->
+
+<!-- <ng-template #divPurchase>
+  <div class="div-purchase">Thanks for purchasing from our Store "{{clinetName}}"</div>
+</ng-template>
+
+<table class="table table-striped table-dark"  *ngIf="!isPurchased else divPurchase">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Product Name</th>
+      <th scope="col">Quantity</th>
+      <th scope="col">Price</th>
+      <th scope="col">Image</th>
+    </tr>
+  </thead>
+  <tbody *ngFor="let product of productList; let i = index">
+     let i=index == index as i
+    <tr>
+      <th scope="row">{{ i + 1 }}</th>
+      <td>{{ product.name }}</td>
+      <td>{{ product.quantity }}</td>
+      <td>{{ product.price }}</td>
+      <td><img [src]="product.img" alt="" style="width: 50px" /></td>
+    </tr>
+  </tbody>
+</table>
+<br>
+<button>Products With Discount</button>&nbsp;
+<button>Products Without Discount</button> -->
+
+
+
+
+<div class="text-center">
+  <button (click)="goToProductWithDiscount()" class="btn btn-primary mt-2 mr-2">Product With Discount</button>
+  <button (click)="goToProductWithoutDiscount()" class="btn btn-primary mt-2">Product Without Discount</button>
+</div>
+
+<router-outlet></router-outlet>
+
+ <!-- <div class="container text-center mt-3 mb-3"> -->
+<!--  <h1><span>Store : </span>{{storeName | uppercase}}</h1>
+  <img id="store-logo" class="mr-3" [src]="storeLogo">
+  <h3 *ngIf="discount !== 0">We offer an explicit discount of :{{discount|percent}}</h3>
+  <div class="row mt-3 mb-3">
+      <label class="h5 offset-2 col-2 mt-2">Client Name : </label>
+      <input type="text" [(ngModel)]="clinetName" class="form-control col-4" />
+      <span class="mt-2 h6 col-4 overflow-hidden">{{clinetName}}</span>
+  </div> -->
+  <!-- <div class="row mt-3 mb-3">
+      <label class="h5 offset-2 col-2 mt-2">Categories :</label>
+      <select class="form-control col-4">
+          <option *ngFor="let cat of categoryList" [value]="cat.ID">{{categoryList.Name}}</option>
+      </select>
+  </div> -->
+
+  <!-- <div *ngIf="isPurchased; then messageSection; else productSection">
+
+  </div>
+  <ng-template #productSection>
+      <h3 class="mt-2">Products</h3>
+      <table *ngIf="productList != null" class="table table-striped table-dark mt-2">
+          <thead>
+              <tr>
+                  <th>ID</th>
+                  <th>Name</th>
+                  <th>Quantity</th>
+                  <th>Price</th>
+              </tr>
+          </thead>
+          <tbody>
+              <tr *ngFor="let product of productList">
+                  <td>{{product.id}}</td>
+                  <td>{{product.name}}</td>
+                  <td>{{product.quantity}}</td>
+                  <td>{{product.price}}</td>
+              </tr>
+          </tbody>
+      </table>
+  </ng-template>
+  <ng-template #messageSection>
+      <div>{{"Thanks for purchasing from our Store " + clinetName}}</div>
+  </ng-template>
+  <button class="btn btn-primary" (click)="Toggle()">Buy</button>
+</div> -->
+
+<!-- <div class="container d-flex flex-wrap">
+  <div class="col-6 col-md-3 mb-4" *ngFor="let product of productList">
+      <div class="card">
+          <img style="height:300px" class="card-img-top p-3" [src]="product.img" alt="Card image cap">
+          <div class="card-body">
+              <div class="card-text">
+                  <span>{{product.name}}</span><br>
+                  <span>No Reviews Yet</span><br>
+                  <span>{{product.price | currency}}</span>
+              </div>
+              <div class="text-center mt-2">
+                  <button class="bg-dark text-light btn">
+                      <i class="fas fa-briefcase"></i>
+                      Add To Cart
+                  </button>
+              </div>
+          </div>
+
+      </div>
+  </div>
+</div> -->
